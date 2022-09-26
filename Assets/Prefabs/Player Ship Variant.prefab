@@ -86,3 +86,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbcec1804c46dc4992f008cb82897b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement:
+    m_Name: Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d6f43dd5-49f5-482b-b8af-4b9b0df799a2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector Keyboard Movement
+      m_Id: d501b214-86fc-46e7-8abc-38a0ec4be921
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 398da5ce-91a6-466d-ab36-1c3d1804bac2
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: ea587c90-f0c0-4c97-bcd2-508455297980
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 2823a25b-fdb3-4135-b744-3f49cfc8de3a
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 775bd94f-7996-4d51-9359-21dc55771b82
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: 
+      m_Id: bab984c7-abb2-46e0-9d9e-2ea63f63dd70
+      m_Path: <Gamepad>/leftStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 0
+    m_Flags: 0
+  movementSpeed: 20
+  xRange: 10
+  yRange: 7
+  PositionPitchFactor: -2
+  controlPitchFactor: -15
+  PositionYawFactor: 2
+  controlRollFactor: -20

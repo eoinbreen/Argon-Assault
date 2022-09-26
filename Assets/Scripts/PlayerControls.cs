@@ -28,8 +28,17 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ProcessMovement();
+        ProcessRotation();
+    }
 
-        //Y Clamp (-8f, 11f) X Clamp (-16f, 16f)
+    void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(-30f,30f,0);
+    }
+
+    void ProcessMovement()
+    {
         float xMovement = movement.ReadValue<Vector2>().x * Time.deltaTime;
         float yMovement = movement.ReadValue<Vector2>().y * Time.deltaTime;
 

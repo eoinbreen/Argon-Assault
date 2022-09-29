@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine.InputSystem;
 public class PlayerControls : MonoBehaviour
 {
     [SerializeField] InputAction movement;
+    [SerializeField] InputAction firing;
+
     [SerializeField] float movementSpeed = 20f;
 
     [SerializeField] float xRange = 10f;
@@ -15,6 +18,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float PositionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -20f;
+
+    [SerializeField] GameObject[] lasers;
 
     float xThrow, yThrow;
     
@@ -27,17 +32,20 @@ public class PlayerControls : MonoBehaviour
     void OnEnable()
     {
         movement.Enable();
+        firing.Enable();
     }
 
     private void OnDisable()
     {
         movement.Disable();
+        firing.Disable();
     }
     // Update is called once per frame
     void Update()
     {
         ProcessMovement();
         ProcessRotation();
+        ProcessFiring();
     }
 
     void ProcessRotation()
@@ -69,5 +77,33 @@ public class PlayerControls : MonoBehaviour
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    void ProcessFiring()
+    {
+        if (firing.ReadValue<float>() > 0.5)
+        {
+            ActivateLasers();
+        }
+        else
+        {
+            DeactivateLasers();
+        }
+    }
+
+    void ActivateLasers()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(true);
+        }
+    }
+
+    void DeactivateLasers()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(false);
+        }
     }
 }

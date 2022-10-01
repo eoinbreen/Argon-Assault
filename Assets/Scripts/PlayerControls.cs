@@ -6,11 +6,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
+    
     [SerializeField] InputAction movement;
     [SerializeField] InputAction firing;
 
     [SerializeField] float movementSpeed = 20f;
-
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
 
@@ -83,27 +83,22 @@ public class PlayerControls : MonoBehaviour
     {
         if (firing.ReadValue<float>() > 0.5)
         {
-            ActivateLasers();
+            SetLasersActive(true);
         }
         else
         {
-            DeactivateLasers();
+            SetLasersActive(false);
         }
     }
 
-    void ActivateLasers()
+    void SetLasersActive(bool isActive)
     {
         foreach (GameObject laser in lasers)
         {
-            laser.SetActive(true);
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
         }
     }
 
-    void DeactivateLasers()
-    {
-        foreach (GameObject laser in lasers)
-        {
-            laser.SetActive(false);
-        }
-    }
+  
 }

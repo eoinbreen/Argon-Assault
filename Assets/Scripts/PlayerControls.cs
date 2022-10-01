@@ -6,18 +6,19 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
-    
+    [Header("Input Settings")]
     [SerializeField] InputAction movement;
     [SerializeField] InputAction firing;
+    
+    [Header("General Setup Settings")]
+    [Tooltip("How fast Ship Moves Up and Down")][SerializeField] float movementSpeed = 20f;
+    [Tooltip("How far Ship Can Move Left and Right")] [SerializeField] float xRange = 10f;
+    [Tooltip("How far Ship Can Move Up and Down")] [SerializeField] float yRange = 7f;
 
-    [SerializeField] float movementSpeed = 20f;
-    [SerializeField] float xRange = 10f;
-    [SerializeField] float yRange = 7f;
-
-    [SerializeField] float PositionPitchFactor = -2f;
-    [SerializeField] float controlPitchFactor = -15f;
+    [Tooltip("Pitch Change in relation to Position")] [SerializeField] float PositionPitchFactor = -2f;
+    [Tooltip("Pitch Change in relation to Movement")] [SerializeField] float movementPitchFactor = -15f;
     [SerializeField] float PositionYawFactor = 2f;
-    [SerializeField] float controlRollFactor = -20f;
+    [Tooltip("Roll Change in relation to Movement")] [SerializeField] float MovementRollFactor = -20f;
 
     [SerializeField] GameObject[] lasers;
 
@@ -52,12 +53,12 @@ public class PlayerControls : MonoBehaviour
     {
 
         float pitchDueToPosition = transform.localPosition.y * PositionPitchFactor;
-        float pitchDueToMovement = yThrow * controlPitchFactor;
+        float pitchDueToMovement = yThrow * movementPitchFactor;
         float pitch = pitchDueToPosition + pitchDueToMovement;
 
 
         float yaw = transform.localPosition.x * PositionYawFactor; ;
-        float roll = xThrow * controlRollFactor;
+        float roll = xThrow * MovementRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }

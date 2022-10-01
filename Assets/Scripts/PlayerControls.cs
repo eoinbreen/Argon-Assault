@@ -14,13 +14,17 @@ public class PlayerControls : MonoBehaviour
     [Tooltip("How fast Ship Moves Up and Down")][SerializeField] float movementSpeed = 20f;
     [Tooltip("How far Ship Can Move Left and Right")] [SerializeField] float xRange = 10f;
     [Tooltip("How far Ship Can Move Up and Down")] [SerializeField] float yRange = 7f;
-
+    
+    [Header("Screen Position Based Tuning")]
     [Tooltip("Pitch Change in relation to Position")] [SerializeField] float PositionPitchFactor = -2f;
+    [Tooltip("Yaw Change in relation to Position")] [SerializeField] float PositionYawFactor = 2f;
+    
+    [Header("Player Input Based Tuning")]
     [Tooltip("Pitch Change in relation to Movement")] [SerializeField] float movementPitchFactor = -15f;
-    [SerializeField] float PositionYawFactor = 2f;
     [Tooltip("Roll Change in relation to Movement")] [SerializeField] float MovementRollFactor = -20f;
 
-    [SerializeField] GameObject[] lasers;
+    [Header("Laser Array")]
+    [Tooltip ("Add all player Lasers here")][SerializeField] GameObject[] lasers;
 
     float xThrow, yThrow;
     

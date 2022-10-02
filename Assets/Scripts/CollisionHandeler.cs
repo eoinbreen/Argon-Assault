@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandeler : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
-    {
-        print(name + " Just Collided With " + collision.gameObject.name);
-    }
+    int currentLevel;
+   
 
     private void OnTriggerEnter(Collider other)
     {
-        print(name + " Was Triggered By " + other.gameObject.name);
+        GetComponent<PlayerControls>().enabled = false;// disable PlayerControls Script
+        Invoke("ReloadLevel", 1f);//1 second delay on reloading Level to play audio and particles
+    }
+
+    void ReloadLevel()
+    {
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentLevel);
     }
 }
+

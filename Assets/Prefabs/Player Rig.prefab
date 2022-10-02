@@ -198,6 +198,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2789107445488616141, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
+      propertyPath: xRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789107445488616141, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
+      propertyPath: yRange
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789107445488616141, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
       propertyPath: firing.m_Id
       value: 43ead870-9ef6-4f1a-9511-6ce29ae7afbd
       objectReference: {fileID: 0}
@@ -245,6 +253,30 @@ PrefabInstance:
       propertyPath: firing.m_SingletonActionBindings.Array.data[1].m_Action
       value: Firing
       objectReference: {fileID: 0}
+    - target: {fileID: 5511374195320536379, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
+      propertyPath: m_Size.x
+      value: 12.681435
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511374195320536379, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5251503
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511374195320536379, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
+      propertyPath: m_Size.z
+      value: 9.860584
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511374195320536379, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
+      propertyPath: m_Center.x
+      value: -0.05105591
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511374195320536379, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
+      propertyPath: m_Center.y
+      value: -0.051427364
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511374195320536379, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
+      propertyPath: m_Center.z
+      value: -0.10872841
+      objectReference: {fileID: 0}
     - target: {fileID: 6874302434689233273, guid: c6b835b93dd1626428ef51d5aa27e384, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
       value: 500
@@ -278,7 +310,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

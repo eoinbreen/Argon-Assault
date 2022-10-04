@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] ParticleSystem explosion;
     private void OnParticleCollision(GameObject other)
     {
-        print(name + " Has Been Shot");
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

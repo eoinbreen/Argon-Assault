@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4789262254350342504}
   - component: {fileID: 4789262254350342511}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: Player Explosion 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4789262254350342510}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 147.64, y: 4.71, z: 235.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -226,20 +226,20 @@ ParticleSystem:
       maxColor: {r: 0.8773585, g: 0.15450332, b: 0.15450332, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.8396226, g: 0, b: 0, a: 1}
-        key1: {r: 0.9433962, g: 0.42423156, b: 0.42423156, a: 1}
-        key2: {r: 0.5566038, g: 0.12427313, b: 0.12427313, a: 1}
-        key3: {r: 1, g: 0.21383637, b: 0.21383637, a: 0}
-        key4: {r: 0.7735849, g: 0.45733947, b: 0.45733947, a: 0}
-        key5: {r: 0.9622642, g: 0.5961196, b: 0.5961196, a: 0}
+        key0: {r: 0.972549, g: 0.5602573, b: 0.09019605, a: 1}
+        key1: {r: 0.94509804, g: 0.67522824, b: 0.4235294, a: 1}
+        key2: {r: 0.7830189, g: 0.315236, b: 0.12311613, a: 1}
+        key3: {r: 1, g: 0.4759953, b: 0.21568626, a: 0}
+        key4: {r: 0.7830189, g: 0.45521706, b: 0.16743791, a: 0}
+        key5: {r: 0.9150943, g: 0.50137585, b: 0.10935081, a: 0}
         key6: {r: 0.990566, g: 0.744482, b: 0.744482, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 10794
-        ctime1: 20239
+        ctime1: 20817
         ctime2: 31418
         ctime3: 42020
         ctime4: 52814
-        ctime5: 64571
+        ctime5: 65535
         ctime6: 57825
         ctime7: 0
         atime0: 0

@@ -381,6 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4789262254350342504, guid: 7233265ccaaa992438bcd1c77c10922b, type: 3}
+  pointValue: 1
 --- !u!1 &1488443910
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4789262254350342504, guid: 7233265ccaaa992438bcd1c77c10922b, type: 3}
+  pointValue: 1
 --- !u!135 &1488443912
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -702,6 +704,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4789262254350342504, guid: 7233265ccaaa992438bcd1c77c10922b, type: 3}
+  pointValue: 5
+--- !u!1 &1907537642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907537644}
+  - component: {fileID: 1907537643}
+  m_Layer: 0
+  m_Name: Scoreboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1907537643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907537642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd505ef76b2c064c9d03c828bc7bac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1907537644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907537642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017794338
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4789262254350342504, guid: 7233265ccaaa992438bcd1c77c10922b, type: 3}
+  pointValue: 1
 --- !u!135 &2017794340
 SphereCollider:
   m_ObjectHideFlags: 0

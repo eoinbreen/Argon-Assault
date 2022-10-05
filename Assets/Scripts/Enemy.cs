@@ -13,19 +13,21 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        createRigidbody();
         scoreBoard = FindObjectOfType<ScoreBoard>(); // Keeps same scoreboard throughout game
     }
+
+    void createRigidbody()
+    {
+        var rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
+    }
+
     private void OnParticleCollision(GameObject other)
     {
-        ProcessScore();
         ProcessHit();
     }
-
-    private void ProcessScore()
-    {
-        scoreBoard.IncreaseScore(pointValue);
-    }
-
+    
     private void ProcessHit()
     {
         if (hp > 0)
@@ -37,6 +39,12 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(explosionVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            ProcessScore();
         }
+    }
+
+    private void ProcessScore()
+    {
+        scoreBoard.IncreaseScore(pointValue);
     }
 }

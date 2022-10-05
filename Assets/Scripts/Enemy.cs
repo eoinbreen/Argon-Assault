@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] ParticleSystem explosion;
+    [SerializeField] ParticleSystem explosionVFX;
 
     [SerializeField] int pointValue = 1;
+    [SerializeField] int hp = 2;
     
     ScoreBoard scoreBoard;
 
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         ProcessScore();
-        KillEnemy();
+        ProcessHit();
     }
 
     private void ProcessScore()
@@ -25,9 +26,17 @@ public class Enemy : MonoBehaviour
         scoreBoard.IncreaseScore(pointValue);
     }
 
-    private void KillEnemy()
+    private void ProcessHit()
     {
-        Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        if (hp > 0)
+        {
+            hp --;
+            print(name + " HP is now " + hp);
+        }
+        else
+        {
+            Instantiate(explosionVFX, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

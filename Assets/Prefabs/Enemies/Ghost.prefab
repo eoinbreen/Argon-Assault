@@ -458,8 +458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVFX: {fileID: 4789262254350342510, guid: 7233265ccaaa992438bcd1c77c10922b, type: 3}
-  pointValue: 25
-  hp: 15
+  pointValue: 35
+  hp: 20
 --- !u!1 &3768767671686201763
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] ParticleSystem explosionVFX;
+    [SerializeField] GameObject explosionVFX;
 
     [SerializeField] int pointValue = 1;
     [SerializeField] int hp = 2;
     
     ScoreBoard scoreBoard;
+    GameObject bin;
 
     private void Start()
     {
         createRigidbody();
         scoreBoard = FindObjectOfType<ScoreBoard>(); // Keeps same scoreboard throughout game
+        bin = GameObject.FindGameObjectWithTag("Bin");
     }
 
     void createRigidbody()
@@ -37,7 +39,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Instantiate(explosionVFX, transform.position, Quaternion.identity);
+            GameObject vfx = Instantiate(explosionVFX, transform.position, Quaternion.identity);
+            vfx.transform.SetParent(bin.transform);
             Destroy(gameObject);
             ProcessScore();
         }

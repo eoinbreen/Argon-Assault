@@ -1050,4 +1050,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionVFX: {fileID: 4789262254350342510, guid: 7233265ccaaa992438bcd1c77c10922b, type: 3}
   pointValue: 10
-  hp: 5
+  hp: 4

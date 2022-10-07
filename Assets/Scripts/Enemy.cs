@@ -19,6 +19,23 @@ public class Enemy : MonoBehaviour
         bin = GameObject.FindGameObjectWithTag("Bin");
     }
 
+    private void Update()
+    {
+        CheckPosition();
+    }
+
+    void CheckPosition()
+    {
+        if(transform.position.x<-10 || transform.position.x > 1010)
+        {
+            Destroy(gameObject);
+        }
+        if (transform.position.y < -10 || transform.position.y > 1010)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void createRigidbody()
     {
         var rb = gameObject.AddComponent<Rigidbody>();

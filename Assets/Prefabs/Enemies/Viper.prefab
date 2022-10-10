@@ -964,6 +964,7 @@ GameObject:
   - component: {fileID: 8654295646128247393}
   - component: {fileID: 8662751910246350419}
   - component: {fileID: 4936882053663266276}
+  - component: {fileID: 3977555564428157508}
   m_Layer: 0
   m_Name: Viper
   m_TagString: Untagged
@@ -1052,6 +1053,19 @@ MonoBehaviour:
   explosionVFX: {fileID: 4789262254350342510, guid: 7233265ccaaa992438bcd1c77c10922b, type: 3}
   pointValue: 20
   hp: 8
+--- !u!114 &3977555564428157508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8676554917585958937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9eaac54f8e8a2418e142aaa5279740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 20
 --- !u!1 &8887240256904618915
 GameObject:
   m_ObjectHideFlags: 0

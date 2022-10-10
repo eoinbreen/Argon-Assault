@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 6104213402659675056}
   - component: {fileID: 6094399010037480030}
   - component: {fileID: 8117905347155359611}
+  - component: {fileID: 1599277929173973890}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -640,6 +641,19 @@ MonoBehaviour:
   explosionVFX: {fileID: 4789262254350342510, guid: 7233265ccaaa992438bcd1c77c10922b, type: 3}
   pointValue: 75
   hp: 35
+--- !u!114 &1599277929173973890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108016870495349282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9eaac54f8e8a2418e142aaa5279740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 20
 --- !u!1 &6289320734430089746
 GameObject:
   m_ObjectHideFlags: 0
